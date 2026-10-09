@@ -121,6 +121,22 @@ const restaurants = {
     food: '西餐与共享拼盘，更适合不想吃自助、想坐着聊天的同事。',
     booking: '20人预订相邻区域，按餐费上限商量团队菜单；可升级主菜或共享拼盘，饮料与服务费需计入。'
   }
+  marriott_kangqiao: {
+    name: '上海万豪酒店康桥 · Goji Kitchen & Bar', short: '康桥万豪自助餐', type: '酒店自助餐',
+    address: '浦东新区康新公路4499号',
+    hours: '官网列示每日营业；晚餐时段和10月10日安排需预约确认。',
+    source: 'https://www.marriott.com/en-us/hotels/shazh-shanghai-marriott-hotel-kangqiao/dining/',
+    food: '酒店自助餐，适合卡丁车后集中用餐和团队安排。',
+    booking: '官网显示提供自助餐并接受预订；确认20人相邻座位、晚餐套餐和团队接待。'
+  },
+  holidayinn_kangqiao: {
+    name: '上海康桥假日酒店 · 康桥餐厅', short: '康桥假日酒店餐厅', type: '酒店餐厅',
+    address: '浦东新区秀沿路800号附近',
+    hours: '官方页面列示酒店餐饮服务；晚餐时段和团队接待需确认。',
+    source: 'https://www.ihg.com/holidayinn/hotels/us/en/shanghai/shgks/hoteldetail/dining',
+    food: '酒店餐厅和休闲酒廊，适合20人集中用餐。',
+    booking: '询问20人桌位、团队菜单、是否可安排相邻区域及当日营业情况。'
+  },
 };
 
 const downtownDinners = [
