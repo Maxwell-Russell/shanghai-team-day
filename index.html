@@ -61,7 +61,7 @@ h1{font-size:40px;letter-spacing:0}.brand,.label{letter-spacing:0}
 <footer><p>信息检索：2026年10月9日。餐厅为待询价候选，10月10日营业、20人余位及团队含税团队接待信息均未获得门店确认；部分来源点评较早。超出对应团队安排的候选不预订。</p><p>交通时长为规划估算，去程与餐厅转场另行安排，晚餐后自行返程。户外方案需临近出发查看天气与园方活动规定。</p><p><a href="https://www.shshunjia.cn/productinfo/1996726.html?templateId=1133605" target="_blank" rel="noopener">出发地点资料</a> · <a href="https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm" target="_blank" rel="noopener">10月10日调休安排</a></p></footer>
 <noscript><div class="noscript">请启用浏览器JavaScript查看详细方案和投票。备选有室内运动、卡丁车、密室、公园定向及桌游德扑；每人活动与晚餐合计上限团队团队接待信息，交通另计。</div></noscript>
 </main>
-<script src="plans.js?v=20261009-1922"></script>
+<script src="plans.js?v=20261009-1930"></script>
 <script>
 const map=name=>'https://www.amap.com/search?query='+encodeURIComponent('上海 '+name)+'&city=310000';
 const link=(url,text)=>`<a href="${url}" target="_blank" rel="noopener">${text}</a>`;
@@ -80,5 +80,5 @@ window.addEventListener('hashchange',()=>{const i=plans.findIndex(p=>'#'+p.id===
 window.addEventListener('vote-activity-selected',event=>{const i=plans.findIndex(p=>p.id===event.detail);if(i>=0){render(i);history.replaceState(null,'','#'+plans[i].id);}});
 </script>
 <script src="vendor/supabase.js" defer></script>
-<script src="voting.js?v=20261009-1922" defer></script>
+<script src="voting.js?v=20261009-1930" defer></script>
 </body></html>
