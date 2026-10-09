@@ -120,7 +120,7 @@ const restaurants = {
     source: 'https://gs.ctrip.com/html5/you/foods/fooddetail/2461/12178674.html',
     food: '西餐与共享拼盘，更适合不想吃自助、想坐着聊天的同事。',
     booking: '20人预订相邻区域，按餐费上限商量团队菜单；可升级主菜或共享拼盘，饮料与服务费需计入。'
-  }
+  },
   marriott_kangqiao: {
     name: '上海万豪酒店康桥 · Goji Kitchen & Bar', short: '康桥万豪自助餐', type: '酒店自助餐',
     address: '浦东新区康新公路4499号',
