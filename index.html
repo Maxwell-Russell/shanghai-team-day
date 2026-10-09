@@ -56,18 +56,18 @@ h1{font-size:40px;letter-spacing:0}.brand,.label{letter-spacing:0}
 <p class="vote-result" id="voteResult" role="status" aria-live="polite">正在连接投票…</p>
 <p class="vote-updated" id="voteUpdated">正在读取统计…</p>
 </section>
-<section class="compare" aria-labelledby="compare-title"><h2 id="compare-title">五套方案，一眼比较</h2><div class="tablewrap"><table><thead><tr><th>方案</th><th>活动 / 晚餐上限（不含交通）</th><th>晚餐候选</th><th>20人上限</th><th>适合谁</th></tr></thead><tbody id="comparison"></tbody></table></div></section>
+<section class="compare" aria-labelledby="compare-title"><h2 id="compare-title">五套方案，一眼比较</h2><div class="tablewrap"><table><thead><tr><th>方案</th><th>活动安排</th><th>晚餐候选</th><th>备注</th><th>适合谁</th></tr></thead><tbody id="comparison"></tbody></table></div></section>
 <section class="organizer"><h2>确定方案后，先锁活动，再订晚餐</h2><div class="steps"><div><strong>01 / 统一询价</strong><p>报「10月10日下午、20人」，确认团队价、可用项目、排队或分场安排，以及调休日券的使用规则。</p></div><div><strong>02 / 20人座位</strong><p>晚餐询问两张10人桌或相邻区域，核对最低消费与订金。页面推荐的门店均未预订。</p></div><div><strong>03 / 集合出发</strong><p>暂按16:00在5G未来中心集合。地铁集体出发更易控制费用信息；打车建议5辆四人拼车并先查看实时价格。</p></div></div></section>
 <footer><p>信息检索：2026年10月9日。餐厅为待询价候选，10月10日营业、20人余位及团队含税报价均未获得门店确认；部分来源点评较早。超出对应餐费上限的候选不预订。</p><p>交通时长为规划估算，去程与餐厅转场另行安排，晚餐后自行返程。户外方案需临近出发查看天气与园方活动规定。</p><p><a href="https://www.shshunjia.cn/productinfo/1996726.html?templateId=1133605" target="_blank" rel="noopener">出发地点资料</a> · <a href="https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm" target="_blank" rel="noopener">10月10日调休安排</a></p></footer>
 <noscript><div class="noscript">请启用浏览器JavaScript查看详细方案和投票。备选有室内运动、卡丁车、密室、公园定向及桌游德扑；每人活动与晚餐合计上限团队报价，交通另计。</div></noscript>
 </main>
-<script src="plans.js?v=20261009-1915"></script>
+<script src="plans.js?v=20261009-1922"></script>
 <script>
 const map=name=>'https://www.amap.com/search?query='+encodeURIComponent('上海 '+name)+'&city=310000';
 const link=(url,text)=>`<a href="${url}" target="_blank" rel="noopener">${text}</a>`;
 const cards=document.getElementById('choices');
 cards.innerHTML=plans.map((p,i)=>`<button type="button" class="choice" data-index="${i}" aria-pressed="${i===0}" aria-controls="detail"><div class="number"><span>方案 ${p.n}</span><span class="tag">${p.tag}</span></div><h3>${p.title}</h3><p class="desc">${p.short}</p><div class="price">${p.price}<small>/人 · 活动与晚餐上限</small></div><div class="foot">${p.area}</div></button>`).join('');
-document.getElementById('comparison').innerHTML=plans.map(p=>`<tr><td><strong>${p.n} ${p.title}</strong></td><td>${p.activityBudget} / ${p.dinnerBudget}</td><td>${dinnerOptions(p).map(d=>d.short).join(' / ')}</td><td>${(p.price*20).toLocaleString()}</td><td>${p.fit}</td></tr>`).join('');
+document.getElementById('comparison').innerHTML=plans.map(p=>`<tr><td><strong>${p.n} ${p.title}</strong></td><td>${p.short}</td><td>${dinnerOptions(p).map(d=>d.short).join(' / ')}</td><td>${p.fit}</td></tr>`).join('');
 function render(i){
   const p=plans[i];
   const dinners=dinnerOptions(p).map(d=>`<li><span class="dinner-type">${d.type}</span><h3>${d.name}</h3><p>${d.food}</p><p>${d.address}</p><p><strong>转场：</strong>${d.route}</p><p><strong>营业信息：</strong>${d.hours}</p><p><strong>订位确认：</strong>${d.booking}</p><div class="links">${link(map(d.name),'高德查找餐厅')}${link(d.source,'查看门店资料')}</div></li>`).join('');
@@ -80,5 +80,5 @@ window.addEventListener('hashchange',()=>{const i=plans.findIndex(p=>'#'+p.id===
 window.addEventListener('vote-activity-selected',event=>{const i=plans.findIndex(p=>p.id===event.detail);if(i>=0){render(i);history.replaceState(null,'','#'+plans[i].id);}});
 </script>
 <script src="vendor/supabase.js" defer></script>
-<script src="voting.js?v=20261009-1915" defer></script>
+<script src="voting.js?v=20261009-1922" defer></script>
 </body></html>
