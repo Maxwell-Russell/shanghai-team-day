@@ -6,6 +6,7 @@ The page uses Supabase anonymous authentication. In the Supabase dashboard:
 2. Open **SQL Editor** and run [`supabase/setup.sql`](supabase/setup.sql).
 3. Keep the existing `team_votes` table, RLS policies, and `get_team_vote_counts()` function from the initial SQL.
 4. Run [`supabase/add-dinner-voting.sql`](supabase/add-dinner-voting.sql) once to add the boardgames option, dinner choices, and the dinner aggregate function. It is additive: existing activity votes stay in place.
+5. If you already ran the original dinner SQL, run [`supabase/update-dinner-options.sql`](supabase/update-dinner-options.sql) once. It updates only the dinner-option constraint, keeps old rows valid, and adds the new nearby dinner choices for karting and boardgames.
 
 The website only contains the Supabase project URL and publishable key. Do not put a `service_role` or secret key in this repository.
 
